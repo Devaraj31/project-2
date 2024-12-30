@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project2-deployment
+  name: my-deployment
   labels:
-    app: project2-deployment
+    app: my-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: project2-deployment
+      app: my2-deployment
   template:
     metadata:
       labels:
-        app: project2-deployment
+        app: my-deployment
     spec:
       containers:
-      - name: project2-deployment
+      - name: my-deployment
         image: Devaraj31/project-2
         ports:
         - containerPort: 80
